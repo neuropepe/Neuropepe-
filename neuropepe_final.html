@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeuroPepe | AI-Powered Meme Token</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      background: url('VID_20250522_113847_145.mp4') no-repeat center center;
+      background-size: cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    .menu-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2em;
+      cursor: pointer;
+    }
+    nav {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: rgba(0,0,0,0.9);
+      border-radius: 5px;
+      padding: 1em;
+    }
+    nav a {
+      display: block;
+      margin: 0.5em 0;
+      color: white;
+      text-decoration: none;
+    }
+    .main-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 1em 2em;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      margin-top: 2em;
+    }
+    section {
+      padding: 2em;
+      text-align: center;
+    }
+    .whitepaper-title {
+      color: #bb86fc;
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+    .accordion {
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      padding: 1em;
+      width: 100%;
+      border: none;
+      text-align: left;
+      transition: 0.4s;
+      margin-bottom: 0.5em;
+      border-radius: 5px;
+    }
+    .panel {
+      display: none;
+      padding: 1em;
+      background: #fff;
+      color: #000;
+      border-radius: 5px;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 1em;
+      background: #673ab7;
+      color: #fff;
+      padding: 0.75em 1.5em;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .exchange-marquee {
+      background: orange;
+      padding: 1em 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .exchange-marquee span {
+      display: inline-block;
+      padding-right: 2em;
+      animation: marquee 15s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    footer {
+      background: #111;
+      padding: 2em;
+      text-align: center;
+      font-size: 0.85em;
+    }
+    @media (max-width: 768px) {
+      .main-btn {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="mainMenu">
+    <a href="#whitepaper">Whitepaper</a>
+    <a href="#buy">Buy Token</a>
+    <a href="#community">Community</a>
+    <a href="#contact">Contact</a>
+    <a href="#languages">Languages</a>
+  </nav>
+  <h1>Welcome to NeuroPepe</h1>
+  <button class="main-btn" id="buy">کانکت و خرید توکن</button>
+</header>
+
+<section class="section" id="whitepaper">
+  <h2 class="whitepaper-title">Whitepaper</h2>
+  <button class="accordion">1. Introduction</button>
+  <div class="panel"><p>NEUROPEPE is a meme-based utility token on Solana combining memes with DeFi innovation.</p></div>
+  <button class="accordion">2. Vision</button>
+  <div class="panel"><p>To create a vibrant ecosystem for memes and utility. Empowering community through governance.</p></div>
+  <button class="accordion">3. Tokenomics</button>
+  <div class="panel"><p>Supply: 1B NEUROPEPE. Distribution: Airdrop 50%, Liquidity 20%, Dev 15%, Marketing 10%, Team 5%.</p></div>
+  <button class="accordion">4. Features</button>
+  <div class="panel"><p>Solana-based, DAO, NFTs, staking pools.</p></div>
+  <button class="accordion">5. Roadmap</button>
+  <div class="panel"><p>2025: Launch, NFTs, DEX listing, DAO activation.</p></div>
+  <button class="accordion">6. Security</button>
+  <div class="panel"><p>Open-source, audited smart contracts.</p></div>
+  <button class="accordion">7. Conclusion</button>
+  <div class="panel"><p>NeuroPepe is a decentralized movement built around humor and AI.</p></div>
+  <a href="whitepaper.pdf" class="download-btn" target="_blank">Download Whitepaper PDF</a>
+</section>
+
+<section class="exchange-marquee">
+  <span>KuCoin | BitX | Binance | Bybit | Uniswap | PancakeSwap | SushiSwap</span>
+</section>
+
+<footer id="contact">
+  &copy; 2025 NeuroPepe. All rights reserved. | Contact us on Telegram, Twitter, Instagram
+</footer>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("mainMenu");
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  }
+
+  var acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      var panels = document.getElementsByClassName("panel");
+      for (let j = 0; j < panels.length; j++) {
+        panels[j].style.display = "none";
+      }
+      this.nextElementSibling.style.display = "block";
+    });
+  }
+</script>
+
+</body>
+</html>
